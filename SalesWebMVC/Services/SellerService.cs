@@ -1,8 +1,6 @@
 ﻿using SalesWebMVC.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace SalesWebMVC.Services {
     public class SellerService {
@@ -16,8 +14,7 @@ namespace SalesWebMVC.Services {
             return _context.Seller.ToList();
         }
 
-        public void Insert(Seller obj) {
-            obj.Departament = _context.Departament.First();
+        public void Insert(Seller obj) {            
             _context.Add(obj);
             _context.SaveChanges();
         }
