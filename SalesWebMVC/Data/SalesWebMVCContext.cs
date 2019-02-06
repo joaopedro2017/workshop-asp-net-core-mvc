@@ -4,15 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace SalesWebMVC.Models
-{
-    public class SalesWebMVCContext : DbContext
-    {
-        public SalesWebMVCContext (DbContextOptions<SalesWebMVCContext> options)
-            : base(options)
-        {
+namespace SalesWebMVC.Models {
+    public class SalesWebMVCContext : DbContext {
+
+        public SalesWebMVCContext(DbContextOptions<SalesWebMVCContext> options)
+            : base(options) {
         }
 
-        public DbSet<SalesWebMVC.Models.Departament> Departament { get; set; }
+        public DbSet<Departament> Departament { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
     }
 }
